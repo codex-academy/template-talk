@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.js" integrity="sha256-/wU5o1HRMBu91AoM5TxLLP4aspWB+FH8dtrkJZGCPFg=" crossorigin="anonymous"></script>
+	<title>Document</title>
+	<style>
+		.container {
+			width: 1024px;
+			margin : auto;
+
+			/* border : 1px solid; */
+		}
+		body {
+			font-family: 'Courier New', Courier, monospace;
+			background-color: black;
+			color:chartreuse;
+		}
+	</style>
+
+	<!-- create a template -->
+	<script type="text/template-x" class="petListTemplate" >
+		{{#each pets}}
+		<tr>
+			<td>{{type}}</td>
+			<td>{{name}}</td>
+			<td>{{age}}</td>
+			<td>{{color}}</td>
+			<td>{{gender}}</td>
+		</tr>
+		{{/each}}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Pet adoption service</h1>
+		<div class="add" >
+			<h2>Add a pet</h2>
+			
+		</div>
+		<div>
+				<h2>Available pets</h2>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th>Name</th>
+							<th>Age</th>
+							<th>Color</th>
+							<th>Gender</th>
+						</tr>
+					</thead>
+					<tbody class="pets" >
+						<!-- inject template result here -->
+						<tr>
+							<td>Cat</td>
+							<td>Sparkie</td>
+							<td>6 months</td>
+							<td>Orange</td>
+							<td>boy</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+		</div>
+	</div>
+</body>
+<script src="pets.js"></script>
+</html>
